@@ -4,4 +4,16 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "structlog>=25.4.0",
+]
+[tool.setuptools]
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = [
+    "notebooks*", 
+    "static*", 
+    "templates*", 
+    "tests*",  # Often a good idea to exclude test code
+    "docs*",
+]
